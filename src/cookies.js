@@ -72,7 +72,7 @@
 
     Cookies._generateCookieString = function (key, value, options) {
         key = encodeURIComponent(key);
-        value = (value + '').replace(/[^!#$&-+\--:<-\[\]-~]/g, encodeURIComponent);
+        value = encodeURIComponent(value);
         options = options || {};
 
         var cookieString = key + '=' + value;
